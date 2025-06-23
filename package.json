@@ -1,6 +1,9 @@
 {
   "name": "my-project",
   "module": "index.ts",
+  "scripts":{
+    "dev": "bun index.ts"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },

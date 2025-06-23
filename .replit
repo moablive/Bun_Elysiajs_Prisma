@@ -1,14 +1,14 @@
 entrypoint = "index.ts"
 
-hidden = [".config", "bun.lockb"]
-modules = ["bun-1.1"]
+hidden = [".config", "bun.lock"]
+modules = ["bun-1.2"]
 
 [nix]
-channel = "stable-24_05"
+channel = "stable-24_11"
 
 [deployment]
-build = ["sh", "-c", "mkdir .build && bun build index.ts > .build/index.js"]
-run = ["bun", ".build/index.js"]
+build = ["sh", "-c", "bun build --target=bun --outdir=dist index.ts"]
+run = ["bun", "dist/index.js"]
 deploymentTarget = "cloudrun"
 
 [[ports]]
