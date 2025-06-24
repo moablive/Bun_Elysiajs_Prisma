@@ -18,7 +18,6 @@ const app = new Elysia()
   .use(cors({
     origin: [
         'http://localhost:3000',
-        'https://meu-app-incrivel.com'
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'], 
