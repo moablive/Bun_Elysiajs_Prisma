@@ -17,7 +17,8 @@ const app = new Elysia()
   // 2. Acesso do sua API
   .use(cors({
     origin: [
-        'http://localhost:3000',
+        'http://localhost:3000', // API
+        'http://localhost:5173' // UI
     ],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'], 
